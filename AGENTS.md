@@ -1,5 +1,7 @@
 # Agent instructions
 
+- All new SecMantra packages must use the `sm-` prefix (Cargo packages, npm packages where applicable, PyPI distributions where available). Rust import identifiers use underscores, e.g. `sm_asvs_evidence`. Check registry naming rules and availability before publishing.
+
 - This is an assurance *evidence* engine, not a certification authority.
 - Never invent official ASVS requirement identifiers or texts. Pin and validate official catalogue imports.
 - Do not change public JSON contracts without documenting versioning and migration.
