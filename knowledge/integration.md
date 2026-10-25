@@ -1,7 +1,11 @@
 # Integration guide
 
+Crate package: `sm-asvs-evidence`; Rust import: `sm_asvs_evidence`; CLI executable: `sm-asvs-evidence`.
+
+SecMantra packages should consistently use the `sm-` prefix.
+
 ## Consume from Rust
-Use a pinned Git revision dependency and call `asvs_evidence::assess(&catalogue, &evidence, &policy)`. The function is pure and performs no network access. See `examples/consume.rs`.
+Use a pinned Git revision dependency and call `sm_asvs_evidence::assess(&catalogue, &evidence, &policy)`. The function is pure and performs no network access. See `examples/consume.rs`.
 
 ## Consume from any language
 Run the CLI as a child process and parse its JSON output. A nonzero process exit indicates invalid input or an IO error.
