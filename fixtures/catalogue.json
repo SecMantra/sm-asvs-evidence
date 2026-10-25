@@ -1,0 +1,1 @@
+{"version":"DEMO-NOT-OFFICIAL-ASVS","requirements":[{"id":"DEMO-1","text":"Demonstrate an authorization denial test","level":1},{"id":"DEMO-2","text":"Demonstrate an authentication control test","level":1},{"id":"DEMO-3","text":"Demonstrate cryptographic key management review","level":2},{"id":"DEMO-4","text":"Demonstrate session revocation testing","level":2}]}
