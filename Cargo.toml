@@ -1,9 +1,22 @@
 [package]
 name = "asvs-evidence"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
-description = "Offline-first ASVS evidence assessment proof of concept"
+rust-version = "1.78"
+description = "Embeddable, offline-first evidence assessment engine for application security"
 license = "MIT"
+repository = "https://github.com/SecMantra/sm-asvs-evidence"
+readme = "README.md"
+keywords = ["asvs", "security", "evidence", "devsecops"]
+categories = ["development-tools", "command-line-utilities"]
+
+[lib]
+name = "asvs_evidence"
+path = "src/lib.rs"
+
+[[bin]]
+name = "asvs-evidence"
+path = "src/main.rs"
 
 [dependencies]
 clap = { version = "4", features = ["derive"] }
