@@ -1,11 +1,11 @@
 use anyhow::{Context, Result};
-use asvs_evidence::{assess, Catalogue, EvidenceFile, PolicyFile};
+use sm_asvs_evidence::{assess, Catalogue, EvidenceFile, PolicyFile};
 use clap::{Parser, Subcommand};
 use serde::de::DeserializeOwned;
 use std::{fs, path::PathBuf};
 
 #[derive(Parser)]
-#[command(name = "asvs-evidence", version, about = "Offline evidence assessment (experimental)")]
+#[command(name = "sm-asvs-evidence", version, about = "Offline evidence assessment (experimental)")]
 struct Cli {
     #[command(subcommand)]
     command: Command,
@@ -46,7 +46,7 @@ fn main() -> Result<()> {
                 evidence: Vec::new(),
             };
             let empty_policy = PolicyFile { rules: Vec::new() };
-            asvs_evidence::validate(&catalogue, &empty_evidence, &empty_policy)
+            sm_asvs_evidence::validate(&catalogue, &empty_evidence, &empty_policy)
                 .map_err(anyhow::Error::msg)?;
             println!("Validated {} requirements from {}", catalogue.requirements.len(), catalogue.version);
         }
