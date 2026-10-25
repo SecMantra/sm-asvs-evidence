@@ -1,5 +1,5 @@
 [package]
-name = "asvs-evidence"
+name = "sm-asvs-evidence"
 version = "0.2.0"
 edition = "2021"
 rust-version = "1.78"
@@ -11,11 +11,11 @@ keywords = ["asvs", "security", "evidence", "devsecops"]
 categories = ["development-tools", "command-line-utilities"]
 
 [lib]
-name = "asvs_evidence"
+name = "sm_asvs_evidence"
 path = "src/lib.rs"
 
 [[bin]]
-name = "asvs-evidence"
+name = "sm-asvs-evidence"
 path = "src/main.rs"
 
 [dependencies]
