@@ -1,0 +1,14 @@
+name: Rust CI
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo test --all-targets
+      - run: cargo run -- assess --catalogue fixtures/catalogue.json --evidence fixtures/evidence.json --policy fixtures/policy.json
