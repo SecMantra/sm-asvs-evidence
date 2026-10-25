@@ -26,16 +26,18 @@ Expected demo outcomes: `PASS`, `FAIL`, `NEEDS REVIEW`, `NO EVIDENCE`. Evidence 
 
 ## Embed in another Rust application
 
+Package naming convention: all SecMantra packages use the `sm-` prefix. Once published on crates.io, install with `cargo add sm-asvs-evidence`. The crate is **not yet published**.
+
 Add as a Git dependency (pin to a reviewed commit in production):
 
 ```toml
 [dependencies]
-asvs-evidence = { git = "https://github.com/SecMantra/sm-asvs-evidence", rev = "<reviewed-commit-sha>" }
+sm-asvs-evidence = { git = "https://github.com/SecMantra/sm-asvs-evidence", rev = "<reviewed-commit-sha>" }
 serde_json = "1"
 ```
 
 ```rust
-use asvs_evidence::{assess, Catalogue, EvidenceFile, PolicyFile};
+use sm_asvs_evidence::{assess, Catalogue, EvidenceFile, PolicyFile};
 
 let catalogue: Catalogue = serde_json::from_str(catalogue_json)?;
 let evidence: EvidenceFile = serde_json::from_str(evidence_json)?;
