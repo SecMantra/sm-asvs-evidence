@@ -11,7 +11,7 @@ AppSec engineers, CI maintainers, security architects, platform teams, and devel
 2. Validate unique requirement, policy and evidence identifiers.
 3. Match evidence to assessed application commit; stale evidence never produces PASS.
 4. Resolve outcomes deterministically: FAIL on current failure; NEEDS REVIEW on human-review rule; PASS only when all required evidence kinds pass; NO EVIDENCE otherwise.
-5. Expose embeddable `asvs_evidence::assess` and a CLI.
+5. Expose embeddable `sm_asvs_evidence::assess` and a CLI.
 6. Serialize stable report JSON with schema_version.
 7. Run offline; no external calls in the assessment core.
 
