@@ -1,0 +1,1 @@
+{"rules":[{"requirement_id":"DEMO-1","required_kinds":["integration_test"]},{"requirement_id":"DEMO-2","required_kinds":["integration_test"]},{"requirement_id":"DEMO-3","required_kinds":["architecture_review"],"human_review":true},{"requirement_id":"DEMO-4","required_kinds":["integration_test"]}]}
